@@ -1,1 +1,3 @@
-# RECOMMENDATION-SYSTEM-UI
+This project aims to identify critical biomarkers for breast cancer using advanced machine learning techniques.  implement a robust Ensemble Voting strategy that aggregates predictions from multiple high-performance classifiers (XGBoost, LightGBM, Random Forest, CatBoost) to enhance stability and generalization.
+
+To maximize model performance, I utilize Bayesian Optimization for hyperparameter tuning. This approach allows for efficient exploration of the parameter space, ensuring that each constituent model operates at its peak potential before the voting process. The pipeline is designed to process high-dimensional RNA-seq data (TCGA) and pinpoint specific genes associated with disease response.
