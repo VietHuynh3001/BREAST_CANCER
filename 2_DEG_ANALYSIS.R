@@ -1,20 +1,3 @@
-if (!requireNamespace("BiocManager",quietly=TRUE))
-  install.packages("BiocManager")
-BiocManager::install("org.Hs.eg.db")
-
-if (!requireNamespace("BiocManager",quietly=TRUE))
-  install.packages("BiocManager")
-BiocManager::install("clusterProfiler")
-
-if (!requireNamespace("BiocManager",quietly=TRUE))
-  install.packages("BiocManager")
-BiocManager::install("AnnotationDbi")
-
-install.packages('pheatmap')
-if (!requireNamespace("BiocManager",quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install('limma')
-
 # SET WORK DIRECTORY
 setwd('D:/MSc/demo_TCGA_BRCA/')
 # IMPORT LIBRARIES
@@ -210,3 +193,4 @@ data_normalized_DEG <- filter_deg(data_normalized,top.over.expressed.genes)
 write.csv(x = data_normalized_up_gene,'D:/MSc/demo_TCGA_BRCA/results/normalized_data_up_genes.csv')
 write.csv(x = data_normalized_down_gene,'D:/MSc/demo_TCGA_BRCA/results/normalized_data_down_genes.csv')
 write.csv(x = data_normalized_DEG,'D:/MSc/demo_TCGA_BRCA/results/normalized_data_DEG.csv')
+
