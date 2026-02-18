@@ -19,7 +19,7 @@ To explore the biological significance of the identified biomarkers, Enrichment 
 In the first stage of this project, Differential Expression Analysis (DEA) was conducted on the TCGA-BRCA dataset to identify genes with significant expression changes between cancer and normal samples. Based on the statistical threshold of |log₂FC| > 0.5 and P < 0.05, a total of 1,340 differentially expressed genes (DEGs) were identified. Within this set, 456 genes were found to be up-regulated, while 886 genes were classified as down-regulated. The distribution and significance of these candidates are clearly illustrated in the Volcano plot, where specific focus was placed on the up-regulated genes due to their potential roles in diagnosis and treatment.
 
 <p align="center">
-  <img src="Vocano_plot.png" width="600"/>
+  <img src="result/Vocano_plot.png" width="600"/>
   <br>
   <i>
     Figure 1: Volcano plot representing 1,340 differentially expressed genes, including 456 up-regulated and 886 down-regulated candidates.
