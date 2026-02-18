@@ -14,9 +14,9 @@ The individual ranking lists from the four ML models are integrated using the Ro
 To explore the biological significance of the identified biomarkers, Enrichment Analysis is conducted. Specifically, Gene Ontology (GO) terms are analyzed to determine the biological processes and molecular functions associated with these genes. This step is performed to ensure the selected biomarkers are relevant to cancer biology.
 
 # 3.Results:
-## 3.1. Differential Expression Analysis (DEA)
+## 3.1. Differential Expression Analysis
 
-In the first stage of this project, Differential Expression Analysis (DEA) was conducted on the TCGA-BRCA dataset to identify genes with significant expression changes between cancer and normal samples. Based on the statistical threshold of |log₂FC| > 0.5 and P < 0.05, a total of 1,340 differentially expressed genes (DEGs) were identified. Within this set, 456 genes were found to be up-regulated, while 886 genes were classified as down-regulated. The distribution and significance of these candidates are clearly illustrated in the Volcano plot, where specific focus was placed on the up-regulated genes due to their potential roles in diagnosis and treatment.
+In the first stage of this project, Differential Expression Analysis was conducted on the TCGA-BRCA dataset to identify genes with significant expression changes between cancer and normal samples. Based on the statistical threshold of |log₂FC| > 0.5 and P < 0.05, a total of 1,340 differentially expressed genes were identified. Within this set, 456 genes were found to be up-regulated, while 886 genes were classified as down-regulated. The distribution and significance of these candidates are clearly illustrated in the Volcano plot, where specific focus was placed on the up-regulated genes due to their potential roles in diagnosis and treatment.
 
 <p align="center">
   <img src="result/Vocano_plot.png" width="600"/>
@@ -52,9 +52,9 @@ The performance of the trained models was evaluated using Accuracy and ROC-AUC m
 
 The extraction of feature importance from these optimized models serves as the critical input for the subsequent <b>Robust Rank Aggregation (RRA)</b> stage to identify the final consensus biomarkers.
 
-## 3.3. Robust Rank Aggregation (RRA)
+## 3.3. Robust Rank Aggregation
 
-To identify a consensus set of biomarkers, the individual feature importance rankings from the four optimized machine learning models were integrated using the Robust Rank Aggregation (RRA) method. This statistical approach was applied to minimize the inherent biases of specific algorithms and to prioritize genes that were consistently ranked as highly significant across all models. By aggregating these multiple ranking lists, a stable and high-confidence signature of up-regulated genes was established.
+To identify a consensus set of biomarkers, the individual feature importance rankings from the four optimized machine learning models were integrated using the Robust Rank Aggregation method. This statistical approach was applied to minimize the inherent biases of specific algorithms and to prioritize genes that were consistently ranked as highly significant across all models. By aggregating these multiple ranking lists, a stable and high-confidence signature of up-regulated genes was established.
 
 <p align="center">
   <img src="result/RRA_plot.png" width="800"/>
@@ -66,11 +66,11 @@ To identify a consensus set of biomarkers, the individual feature importance ran
 
 The aggregation process successfully identified several key genes with high stability scores, as visualized in the RRA heatmap. Top-ranked candidates, including `ACSM4, LINC01331, CFHR1, and TM4SF4`, exhibited consistently low p-values across the ensemble, suggesting their strong potential as robust biomarkers for breast cancer. These consolidated results confirm that the integration of multiple machine learning architectures provides a more reliable selection than any single model alone.
 
-## 3.2. Oncology Enrichment Analysis (GO)
+## 3.4. Oncology Enrichment Analysis
 
-Immediately following the differential expression analysis, an <b>Oncology Enrichment Analysis (GO)</b> was performed as a functional branch study to investigate the biological significance of the identified candidates. This analysis was conducted on both <b>456 up-regulated</b> and <b>886 down-regulated genes</b> to categorize them into functional groups, providing a deeper understanding of the molecular mechanisms driving breast cancer progression.
+Immediately following the differential expression analysis, an Oncology Enrichment Analysis was performed as a functional branch study to investigate the biological significance of the identified candidates. This analysis was conducted on both `456 up-regulated` and `886 down-regulated genes` to categorize them into functional groups, providing a deeper understanding of the molecular mechanisms driving breast cancer progression.
 
-As illustrated in the bubble plots below, the identified DEGs are enriched in distinct biological pathways. For the <b>886 down-regulated genes</b>, the enrichment is predominantly found in processes related to tissue structure and cell communication, such as <i>epidermis development</i>, <i>skin development</i>, and <i>cell-cell adhesion via plasma-membrane adhesion molecules</i>. Additionally, significant activity is observed in <i>neuropeptide signaling pathways</i> and <i>hormone metabolic processes</i>.
+As illustrated in the bubble plots below, the identified DEGs are enriched in distinct biological pathways. For the <b>886 down-regulated genes</b>, the enrichment is predominantly found in processes related to tissue structure and cell communication, such as `epidermis development`, `skin development`, and `cell-cell adhesion via plasma-membrane adhesion molecules`. Additionally, significant activity is observed in `neuropeptide signaling pathways` and `hormone metabolic processes`.
 
 <p align="center">
   <img src="result/downregulated_gene_enrichGO.png" width="750"/>
@@ -80,7 +80,7 @@ As illustrated in the bubble plots below, the identified DEGs are enriched in di
   </i>
 </p>
 
-However, specific focus is placed on the <b>456 up-regulated genes</b>, as they demonstrate highly significant enrichment in critical <b>Biological Processes (BP)</b> and <b>Cellular Components (CC)</b> related to RNA metabolism and spliceosomal machinery. Significant enrichment is observed in processes such as <i>spliceosomal tri-snRNP complex assembly</i> and <i>spliceosomal snRNP assembly</i>. Furthermore, a high concentration of these genes is identified within the <i>small nuclear ribonucleoprotein complex</i> and the <i>Sm-like protein family complex</i>. 
+However, specific focus is placed on the `456 up-regulated genes`, as they demonstrate highly significant enrichment in critical `Biological Processes (BP)` and `Cellular Components (CC)` related to RNA metabolism and spliceosomal machinery. Significant enrichment is observed in processes such as `spliceosomal tri-snRNP complex assembly` and `spliceosomal snRNP assembly`. Furthermore, a high concentration of these genes is identified within the `small nuclear ribonucleoprotein complex` and the `Sm-like protein family complex`. 
 
 <p align="center">
   <img src="result/up-regulated-GO.png" width="750"/>
@@ -91,3 +91,9 @@ However, specific focus is placed on the <b>456 up-regulated genes</b>, as they 
 </p>
 
 These findings suggest that the dysregulation of the spliceosome machinery plays a vital role in the cellular pathology of the breast cancer samples. The functional insights gained from this analysis reinforce the biological relevance of the up-regulated features, confirming their suitability for the subsequent <b>Machine Learning training</b> stage to evaluate their predictive importance.
+
+# 4. Conclusion
+
+In this study, a comprehensive bioinformatics pipeline was successfully implemented to identify robust biomarkers for breast cancer using the TCGA-BRCA dataset. Through Differential Expression Analysis, a total of 1,340 differentially expressed genes were identified, with a specific focus placed on the 456 up-regulated candidates due to their significant roles in tumor progression. The functional relevance of these genes was further validated via Gene Ontology enrichment analysis, which revealed a strong association between the up-regulated set and critical spliceosomal machinery and RNA metabolic processes.
+
+The integration of Machine Learning models, optimized through Bayesian Optimization, demonstrated high predictive reliability, with all four ensemble-based algorithms achieving consistent test accuracy scores between 0.87 and 0.88. By employing the Robust Rank Aggregation method, the individual feature rankings were successfully consolidated to minimize algorithmic bias, leading to the identification of a stable consensus signature. Key biomarkers, including `ACSM4, LINC01331, CFHR1, and TM4SF4`, were prioritized as high-confidence candidates. These results suggest that the combination of transcriptomic analysis and ensemble-based machine learning provides a powerful framework for discovering stable biomarkers, which may offer significant value for future clinical diagnosis and targeted immunotherapy strategies.
