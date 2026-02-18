@@ -65,3 +65,29 @@ To identify a consensus set of biomarkers, the individual feature importance ran
 </p>
 
 The aggregation process successfully identified several key genes with high stability scores, as visualized in the RRA heatmap. Top-ranked candidates, including `ACSM4, LINC01331, CFHR1, and TM4SF4`, exhibited consistently low p-values across the ensemble, suggesting their strong potential as robust biomarkers for breast cancer. These consolidated results confirm that the integration of multiple machine learning architectures provides a more reliable selection than any single model alone.
+
+## 3.2. Oncology Enrichment Analysis (GO)
+
+Immediately following the differential expression analysis, an <b>Oncology Enrichment Analysis (GO)</b> was performed as a functional branch study to investigate the biological significance of the identified candidates. This analysis was conducted on both <b>456 up-regulated</b> and <b>886 down-regulated genes</b> to categorize them into functional groups, providing a deeper understanding of the molecular mechanisms driving breast cancer progression.
+
+As illustrated in the bubble plots below, the identified DEGs are enriched in distinct biological pathways. For the <b>886 down-regulated genes</b>, the enrichment is predominantly found in processes related to tissue structure and cell communication, such as <i>epidermis development</i>, <i>skin development</i>, and <i>cell-cell adhesion via plasma-membrane adhesion molecules</i>. Additionally, significant activity is observed in <i>neuropeptide signaling pathways</i> and <i>hormone metabolic processes</i>.
+
+<p align="center">
+  <img src="image_f2e529.jpg" width="750"/>
+  <br>
+  <i>
+    Figure 2: GO enrichment analysis for down-regulated genes displaying functional categories in epidermis development and cell adhesion.
+  </i>
+</p>
+
+However, specific focus is placed on the <b>456 up-regulated genes</b>, as they demonstrate highly significant enrichment in critical <b>Biological Processes (BP)</b> and <b>Cellular Components (CC)</b> related to RNA metabolism and spliceosomal machinery. Significant enrichment is observed in processes such as <i>spliceosomal tri-snRNP complex assembly</i> and <i>spliceosomal snRNP assembly</i>. Furthermore, a high concentration of these genes is identified within the <i>small nuclear ribonucleoprotein complex</i> and the <i>Sm-like protein family complex</i>. 
+
+<p align="center">
+  <img src="image_f2e503.png" width="750"/>
+  <br>
+  <i>
+    Figure 3: GO enrichment analysis for up-regulated genes highlighting RNA processing and spliceosomal complexes.
+  </i>
+</p>
+
+These findings suggest that the dysregulation of the spliceosome machinery plays a vital role in the cellular pathology of the breast cancer samples. The functional insights gained from this analysis reinforce the biological relevance of the up-regulated features, confirming their suitability for the subsequent <b>Machine Learning training</b> stage to evaluate their predictive importance.
