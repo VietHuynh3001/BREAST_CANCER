@@ -73,7 +73,7 @@ Immediately following the differential expression analysis, an <b>Oncology Enric
 As illustrated in the bubble plots below, the identified DEGs are enriched in distinct biological pathways. For the <b>886 down-regulated genes</b>, the enrichment is predominantly found in processes related to tissue structure and cell communication, such as <i>epidermis development</i>, <i>skin development</i>, and <i>cell-cell adhesion via plasma-membrane adhesion molecules</i>. Additionally, significant activity is observed in <i>neuropeptide signaling pathways</i> and <i>hormone metabolic processes</i>.
 
 <p align="center">
-  <img src="image_f2e529.jpg" width="750"/>
+  <img src="result/downregulated_gene_enrichGO.png" width="750"/>
   <br>
   <i>
     Figure 2: GO enrichment analysis for down-regulated genes displaying functional categories in epidermis development and cell adhesion.
