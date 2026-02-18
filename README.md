@@ -27,3 +27,27 @@ In the first stage of this project, Differential Expression Analysis (DEA) was c
 </p>
 
 Following the identification of these DEGs, the 456 up-regulated genes are selected as the primary input features for the next stage, which is Machine Learning training. These features will be used to train multiple models to evaluate and rank their importance.
+
+## 3.2. Machine Learning Training and Evaluation
+
+In this stage, the 456 up-regulated genes identified from the DEA step were utilized to train four ensemble-based models: `XGBoost, Random Forest, LightGBM, and CatBoost`. To achieve the highest predictive performance, `Bayesian Optimization` was employed for hyperparameter tuning, allowing for an efficient search of the optimal model configurations.
+
+The performance of the trained models was evaluated using Accuracy and ROC-AUC metrics. As illustrated in the figures below, all models demonstrated stable performance with Test Accuracy ranging from `0.87 to 0.88`. Specifically:
+- XGBoost: Test Accuracy of `0.88 ± 0.02` and an AUC of `0.65`.
+- Random Forest showed a Test Accuracy of `0.87 ± 0.03` and the highest AUC of `0.74`
+- LightGBM reached a Test Accuracy of `0.87 ± 0.03` and an AUC of `0.61`.
+- CatBoost demonstrated a Test Accuracy of `0.88 ± 0.02` and a high AUC of `0.73`.
+
+<p align="center">
+  <img src="result/Model_Evaluation.png" width="500"/>
+  <br>
+  <i>Figure 2: Model Evaluation metrics showing Train and Test Accuracy for the four algorithms.</i>
+</p>
+
+<p align="center">
+  <img src="result/ROC_AUC.png" width="450"/>
+  <br>
+  <i>Figure 3: ROC-AUC curves illustrating the diagnostic performance of the optimized models.</i>
+</p>
+
+The extraction of feature importance from these optimized models serves as the critical input for the subsequent <b>Robust Rank Aggregation (RRA)</b> stage to identify the final consensus biomarkers.
