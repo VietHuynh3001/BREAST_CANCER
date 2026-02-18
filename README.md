@@ -57,7 +57,7 @@ The extraction of feature importance from these optimized models serves as the c
 To identify a consensus set of biomarkers, the individual feature importance rankings from the four optimized machine learning models were integrated using the Robust Rank Aggregation (RRA) method. This statistical approach was applied to minimize the inherent biases of specific algorithms and to prioritize genes that were consistently ranked as highly significant across all models. By aggregating these multiple ranking lists, a stable and high-confidence signature of up-regulated genes was established.
 
 <p align="center">
-  <img src="RRA_plot.png" width="800"/>
+  <img src="result/RRA_plot.png" width="800"/>
   <br>
   <i>
     Figure 4: Robust Rank Aggregation heatmap displaying the top-ranked consensus biomarkers across the four models.
