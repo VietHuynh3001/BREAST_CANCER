@@ -83,7 +83,7 @@ As illustrated in the bubble plots below, the identified DEGs are enriched in di
 However, specific focus is placed on the <b>456 up-regulated genes</b>, as they demonstrate highly significant enrichment in critical <b>Biological Processes (BP)</b> and <b>Cellular Components (CC)</b> related to RNA metabolism and spliceosomal machinery. Significant enrichment is observed in processes such as <i>spliceosomal tri-snRNP complex assembly</i> and <i>spliceosomal snRNP assembly</i>. Furthermore, a high concentration of these genes is identified within the <i>small nuclear ribonucleoprotein complex</i> and the <i>Sm-like protein family complex</i>. 
 
 <p align="center">
-  <img src="image_f2e503.png" width="750"/>
+  <img src="result/up-regulated-GO.png" width="750"/>
   <br>
   <i>
     Figure 3: GO enrichment analysis for up-regulated genes highlighting RNA processing and spliceosomal complexes.
