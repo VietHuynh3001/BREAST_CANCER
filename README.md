@@ -51,3 +51,17 @@ The performance of the trained models was evaluated using Accuracy and ROC-AUC m
 </p>
 
 The extraction of feature importance from these optimized models serves as the critical input for the subsequent <b>Robust Rank Aggregation (RRA)</b> stage to identify the final consensus biomarkers.
+
+## 3.3. Robust Rank Aggregation (RRA)
+
+To identify a consensus set of biomarkers, the individual feature importance rankings from the four optimized machine learning models were integrated using the Robust Rank Aggregation (RRA) method. This statistical approach was applied to minimize the inherent biases of specific algorithms and to prioritize genes that were consistently ranked as highly significant across all models. By aggregating these multiple ranking lists, a stable and high-confidence signature of up-regulated genes was established.
+
+<p align="center">
+  <img src="RRA_plot.png" width="800"/>
+  <br>
+  <i>
+    Figure 4: Robust Rank Aggregation heatmap displaying the top-ranked consensus biomarkers across the four models.
+  </i>
+</p>
+
+The aggregation process successfully identified several key genes with high stability scores, as visualized in the RRA heatmap. Top-ranked candidates, including `ACSM4, LINC01331, CFHR1, and TM4SF4`, exhibited consistently low p-values across the ensemble, suggesting their strong potential as robust biomarkers for breast cancer. These consolidated results confirm that the integration of multiple machine learning architectures provides a more reliable selection than any single model alone.
